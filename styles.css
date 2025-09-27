@@ -1,0 +1,35 @@
+/* Simple responsive styles for SmartLinq MVP */
+:root{--max:1100px;--accent:#0b6efd;--muted:#666}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.45;margin:0;color:#111}
+.container{max-width:var(--max);margin:0 auto;padding:20px}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-size:1.15rem}
+.tag{margin:0;color:var(--muted);font-size:0.9rem}
+.nav a{margin-left:16px;text-decoration:none;color:#111}
+.nav a.cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px}
+.hero{padding:48px 0;background:linear-gradient(180deg,#f8fbff,white)}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.lead{color:var(--muted);font-size:1.05rem}
+.hero-card .card{padding:18px;border-radius:10px;border:1px solid #eee;background:#fff;box-shadow:0 6px 20px rgba(10,10,40,0.04)}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none}
+.btn.primary{background:var(--accent);color:white}
+.btn.ghost{border:1px solid #ddd}
+.what{margin-top:14px;padding-left:18px}
+.services .cards{display:flex;gap:14px;flex-wrap:wrap}
+.service{flex:1 1 220px;padding:18px;border-radius:10px;border:1px solid #f0f0f0;background:#fff}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:14px}
+.card.small{padding:12px;border-radius:8px;border:1px solid #eee;background:#fff}
+footer{border-top:1px solid #eee;padding:18px 0;margin-top:30px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* forms */
+input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ddd;border-radius:6px}
+textarea{min-height:100px;resize:vertical}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr; }
+  .case-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none}
+}
